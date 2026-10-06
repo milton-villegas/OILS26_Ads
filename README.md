@@ -7,7 +7,7 @@ Ready-to-use graphics for ETH Campus Services screens:
 | Portrait screens | [PNG](OILS26_ETH_vertical_1080x1920.png) · [editable SVG](OILS26_ETH_vertical_1080x1920.svg) | 1080 × 1920 px |
 | ETH eLink bus screens | [PNG](OILS26_ETH_eLink_1920x1080.png) · [editable SVG](OILS26_ETH_eLink_1920x1080.svg) | 1920 × 1080 px |
 
-Both ads feature the OILS26 conference on 20 October 2026, the Roche site visit on 21 October, and the sponsors and partners from the approved A3 poster. They direct viewers to [the event website](https://www.b2match.com/e/oils2026) for registration, the agenda, and visit details. The on-screen graphics use a readable URL instead of a QR code, following ETH Campus Services' digital-display recommendations.
+Both ads take their look from the approved posters in `01_FINAL` (navy pattern background, OILS logo, white Roche card, light-blue call to action) and follow the ETH Campus Services design recommendations (*Gestaltungsempfehlungen für wirkungsvolle Werbemittel*): a short title, large type, What / When / Where, strong contrast, one clear call to action and a readable URL instead of a QR code. To keep them effective on screen the content is reduced to the title, date and venue, the Roche sponsor and site visit (21 October), and [b2match.com/e/oils2026](https://www.b2match.com/e/oils2026). The full sponsor and partner logo wall stays on the print posters.
 
 ## Approved poster references
 
@@ -24,9 +24,9 @@ The [final poster files](01_FINAL) show the complete print layouts and sponsor t
 
 ## Source files
 
-- [Final logo and background assets](07_Codigo/A3_desde_Roche/assets) include the eight sponsor and partner logos used in the ads.
+- [Final logo and background assets](07_Codigo/A3_desde_Roche/assets) include the OILS logo, the Roche logo and the background used in the ads.
 - [OILS brand resources](06_Recursos/marca) include the vector OILS logo and pattern artwork.
-- [ETH screen generator](Logistica_ETH/build_eth_screens.py) builds the screen PNGs and SVGs from those assets. It was used on macOS with ImageMagick.
+- [ETH screen generator](Logistica_ETH/build_eth_screens.py) builds the screen PNGs and SVGs from those assets. It renders with headless Chromium (set `CHROME` to override the path) and uses Eurostile, as in the posters, when it is installed; otherwise it falls back to Inter/Helvetica.
 - The screen graphics follow ETH Campus Services' digital-display recommendations.
 
 The PowerPoint files in `01_FINAL` are the reference for the final print layouts. The Python scripts in `07_Codigo/A3_desde_Roche` document earlier poster generation steps and may require archived inputs that are not part of this delivery.
