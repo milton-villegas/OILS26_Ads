@@ -27,6 +27,6 @@ The [final poster files](01_FINAL) show the complete print layouts and sponsor t
 - [Final logo and background assets](07_Codigo/A3_desde_Roche/assets) include the eight sponsor and partner logos used in the ads.
 - [OILS brand resources](06_Recursos/marca) include the vector OILS logo and pattern artwork.
 - [ETH screen generator](Logistica_ETH/build_eth_screens.py) builds the screen PNGs and SVGs from those assets. It was used on macOS with ImageMagick.
-- The screen graphics follow ETH Campus Services' digital-display recommendations.
+- [ETH Campus Services design guidance](Logistica_ETH/cc_gestaltungshinweise_de.pdf) explains the recommendations used for the screen graphics.
 
 The PowerPoint files in `01_FINAL` are the reference for the final print layouts. The Python scripts in `07_Codigo/A3_desde_Roche` document earlier poster generation steps and may require archived inputs that are not part of this delivery.
