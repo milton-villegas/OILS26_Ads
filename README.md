@@ -13,18 +13,17 @@ Both ads feature the OILS26 conference on 20 October 2026, the Roche site visit 
 
 The [final poster files](01_FINAL) show the complete print layouts and sponsor treatment. The PDFs are for printing; the PowerPoint files are editable.
 
-| Poster | Print PDF | Editable PowerPoint |
-| --- | --- | --- |
-| Teaser A3 | [PDF](01_FINAL/OILS26_teaser_A3.pdf) | [PPTX](01_FINAL/OILS26_teaser_A3.pptx) |
-| Agenda A3 | [PDF](01_FINAL/OILS26_agenda_A3.pdf) | [PPTX](01_FINAL/OILS26_agenda_A3.pptx) |
-| Teaser A0 | [PDF](01_FINAL/OILS26_teaser_A0.pdf) | [PPTX](01_FINAL/OILS26_teaser_A0_editable.pptx) |
+| Poster | Print PDF | Editable PowerPoint | Full-size PNG |
+| --- | --- | --- | --- |
+| Teaser A3 | [PDF](01_FINAL/OILS26_teaser_A3.pdf) | [PPTX](01_FINAL/OILS26_teaser_A3.pptx) | [PNG](01_FINAL/OILS26_teaser_A3.png) |
+| Agenda A3 | [PDF](01_FINAL/OILS26_agenda_A3.pdf) | [PPTX](01_FINAL/OILS26_agenda_A3.pptx) | — |
+| Teaser A0 | [PDF](01_FINAL/OILS26_teaser_A0.pdf) | [PPTX](01_FINAL/OILS26_teaser_A0_editable.pptx) | [PNG](01_FINAL/OILS26_teaser_A0.png) |
 
-<img src="01_FINAL/OILS26_teaser_A3_vista_previa.png" alt="Final A3 teaser with Roche visit and sponsor logos" width="360">
-<img src="01_FINAL/OILS26_agenda_A3_vista_previa.png" alt="Final A3 agenda with sponsor logos" width="360">
+<img src="01_FINAL/OILS26_teaser_A3.png" alt="Final A3 teaser with Roche visit and sponsor logos" width="360">
 
 ## Source files
 
-- [Final logo and background assets](07_Codigo/A3_desde_Roche/assets) include the eight sponsor and partner logos used in the ads.
+- [Logo and background assets](07_Codigo/A3_desde_Roche/assets) document the original poster and screen-ad artwork. The editable PowerPoint files contain the updated print logos.
 - [OILS brand resources](06_Recursos/marca) include the vector OILS logo and pattern artwork.
 - [ETH screen generator](Logistica_ETH/build_eth_screens.py) builds the screen PNGs and SVGs from those assets. It was used on macOS with ImageMagick.
 - [ETH Campus Services design guidance](Logistica_ETH/cc_gestaltungshinweise_de.pdf) explains the recommendations used for the screen graphics.
