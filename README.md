@@ -16,10 +16,11 @@ The [final poster files](01_FINAL) show the complete print layouts and sponsor t
 | Poster | Print PDF | Editable PowerPoint | Full-size PNG |
 | --- | --- | --- | --- |
 | Teaser A3 | [PDF](01_FINAL/OILS26_teaser_A3.pdf) | [PPTX](01_FINAL/OILS26_teaser_A3.pptx) | [PNG](01_FINAL/OILS26_teaser_A3.png) |
-| Agenda A3 | [PDF](01_FINAL/OILS26_agenda_A3.pdf) | [PPTX](01_FINAL/OILS26_agenda_A3.pptx) | — |
+| Agenda A3 | [PDF](01_FINAL/OILS26_agenda_A3.pdf) | [PPTX](01_FINAL/OILS26_agenda_A3.pptx) | [PNG](01_FINAL/OILS26_agenda_A3.png) |
 | Teaser A0 | [PDF](01_FINAL/OILS26_teaser_A0.pdf) | [PPTX](01_FINAL/OILS26_teaser_A0_editable.pptx) | [PNG](01_FINAL/OILS26_teaser_A0.png) |
 
 <img src="01_FINAL/OILS26_teaser_A3.png" alt="Final A3 teaser with Roche visit and sponsor logos" width="360">
+<img src="01_FINAL/OILS26_agenda_A3.png" alt="Final A3 agenda with updated sponsor logos" width="360">
 
 ## Source files
 
