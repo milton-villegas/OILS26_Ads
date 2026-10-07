@@ -38,7 +38,7 @@ const html = L.items.map((it) => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME || undefined, args: ["--no-sandbox", "--disable-gpu"] });
   const pg = await (await browser.newContext({ viewport: { width: L.w, height: L.h } })).newPage();
   const file = path.join(os.tmpdir(), path.basename(outPng) + ".html");
-  fs.writeFileSync(file, `<!doctype html><html><body style="margin:0;width:${L.w}px;height:${L.h}px;overflow:hidden;position:relative;background:#061433">${html}</body></html>`);
+  fs.writeFileSync(file, `<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;width:${L.w}px;height:${L.h}px;overflow:hidden;position:relative;background:#061433">${html}</body></html>`);
   await pg.goto("file://" + file);
   await pg.evaluate(() => document.fonts.ready);
   await pg.screenshot({ path: outPng });
