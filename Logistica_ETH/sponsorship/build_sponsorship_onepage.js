@@ -34,6 +34,6 @@ const page=(h)=>`<!doctype html><html><head><meta charset=utf-8><style>${css}</s
 (async()=>{const b=await chromium.launch({args:["--no-sandbox","--disable-gpu"]});
  const ctx=await b.newContext({viewport:{width:1920,height:1080},deviceScaleFactor:2});const pg=await ctx.newPage();
  for(const [n,h] of [["onepage",s1]]){await pg.setContent(page(h));await pg.evaluate(()=>document.fonts.ready);
-  await pg.screenshot({path:path.join(OUT,`OILS26_Sponsorship_p${n}.png`)});
-  await pg.pdf({path:path.join(OUT,`OILS26_Sponsorship_p${n}.pdf`),width:"1920px",height:"1080px",printBackground:true});}
+  await pg.screenshot({path:path.join(OUT,`OILS26_Sponsorship_${n}.png`)});
+  await pg.pdf({path:path.join(OUT,`OILS26_Sponsorship_${n}.pdf`),width:"1920px",height:"1080px",printBackground:true});}
  await b.close();})();

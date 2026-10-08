@@ -17,23 +17,19 @@ function base(sub){const s=pres.addSlide();s.background={color:NAVY};
  return s;}
 const row=(s,y,h,w=1760)=>s.addShape(RR,{x:px(80),y:px(y),w:px(w),h:px(h),rectRadius:px(14),fill:{color:WHITE,transparency:92},line:{type:"none"}});
 // slide 1
-const X0=1105,CW=180,GAP=5,RH=78,Y0=332;let s=base("Sponsorship packages");
+const X0=1105,CW=180,GAP=4,RH=68,Y0=300;let s=base("Sponsorship packages");
 C.tiers.forEach((t,i)=>{const x=X0+i*(CW+GAP);
- s.addShape(TOP,{x:px(x),y:px(206),w:px(CW),h:px(118),fill:{color:TIER[i].c},line:{type:"none"}});
- s.addText([{text:t[0],options:{fontFace:HEAD,fontSize:pt(34),bold:true,breakLine:true}},{text:t[1],options:{fontFace:BODY,fontSize:pt(23),bold:true}}],{x:px(x),y:px(206),w:px(CW),h:px(118),color:TIER[i].t,align:"center",valign:"middle",margin:0,fit:"none"});});
+ s.addShape(TOP,{x:px(x),y:px(190),w:px(CW),h:px(104),fill:{color:TIER[i].c},line:{type:"none"}});
+ s.addText([{text:t[0],options:{fontFace:HEAD,fontSize:pt(34),bold:true,breakLine:true}},{text:t[1],options:{fontFace:BODY,fontSize:pt(23),bold:true}}],{x:px(x),y:px(190),w:px(CW),h:px(104),color:TIER[i].t,align:"center",valign:"middle",margin:0,fit:"none"});});
 C.rows.forEach((r,k)=>{const y=Y0+k*(RH+GAP);row(s,y,RH);
  s.addText(r[0],{x:px(114),y:px(y),w:px(960),h:px(RH),fontFace:BODY,fontSize:pt(23),color:WHITE,margin:0,valign:"middle",lineSpacingMultiple:1.05,fit:"none"});
  C.tiers.forEach((t,i)=>{if(!r[1][i])return;const x=X0+i*(CW+GAP);
   s.addShape(R,{x:px(x),y:px(y),w:px(CW),h:px(RH),fill:{color:TIER[i].c,transparency:80},line:{type:"none"}});
   s.addShape(pres.ShapeType.ellipse,{x:px(x+CW/2-21),y:px(y+RH/2-21),w:px(42),h:px(42),fill:{color:TIER[i].c},line:{type:"none"}});
   s.addText("✓",{x:px(x+CW/2-21),y:px(y+RH/2-21),w:px(42),h:px(42),fontFace:BODY,fontSize:pt(26),bold:true,color:TIER[i].t,align:"center",valign:"middle",margin:0});});});
-// slide 2
-s=base("Additional offers");
-const priced=C.add.some(a=>a[2]),one=C.add.length===1,RW=one?480:340,RX=1840-RW,AH=one?300:136,AG=one?0:148;
-if(priced){s.addShape(TOP,{x:px(RX),y:px(206),w:px(RW),h:px(70),fill:{color:SKY},line:{type:"none"}});
- s.addText("CHF",{x:px(RX),y:px(206),w:px(RW),h:px(70),fontFace:HEAD,fontSize:pt(38),bold:true,color:"06254E",align:"center",valign:"middle",margin:0});}
-C.add.forEach((a,k)=>{const y=(one?400:290)+k*AG;row(s,y,AH);
- s.addShape(R,{x:px(RX),y:px(y),w:px(RW),h:px(AH),fill:{color:SKY,transparency:80},line:{type:"none"}});
- s.addText([{text:a[0],options:{fontFace:HEAD,fontSize:pt(one?54:34),bold:true,color:WHITE,breakLine:true}},{text:a[1],options:{fontFace:BODY,fontSize:pt(one?34:25),color:SOFT}}],{x:px(114),y:px(y),w:px(RX-150),h:px(AH),margin:0,valign:"middle",fit:"none"});
- s.addText(a[2]||"Open to discussion",{x:px(RX),y:px(y),w:px(RW),h:px(AH),fontFace:a[2]?HEAD:BODY,fontSize:pt(a[2]?64:(one?44:30)),bold:true,color:SKY,align:"center",valign:"middle",margin:0});});
+// prizes strip (same slide)
+const pz=C.add[0];row(s,892,112);
+s.addShape(R,{x:px(1380),y:px(892),w:px(460),h:px(112),fill:{color:SKY,transparency:80},line:{type:"none"}});
+s.addText([{text:"ADDITIONAL OFFER",options:{fontFace:BODY,fontSize:pt(20),bold:true,color:SKY,charSpacing:3,breakLine:true}},{text:pz[0],options:{fontFace:HEAD,fontSize:pt(32),bold:true,color:WHITE,breakLine:true}},{text:pz[1],options:{fontFace:BODY,fontSize:pt(23),color:SOFT}}],{x:px(114),y:px(892),w:px(1240),h:px(112),margin:0,valign:"middle",fit:"none"});
+s.addText("Open to discussion",{x:px(1380),y:px(892),w:px(460),h:px(112),fontFace:BODY,fontSize:pt(34),bold:true,color:SKY,align:"center",valign:"middle",margin:0});
 pres.writeFile({fileName:path.join(OUT,"OILS26_Sponsorship_Packages.pptx")}).then(()=>console.log("ok"));
