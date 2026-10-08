@@ -1,0 +1,121 @@
+{
+ "tiers": [
+  [
+   "Silver",
+   "CHF 800"
+  ],
+  [
+   "Gold",
+   "CHF 1600"
+  ],
+  [
+   "Platinum",
+   "CHF 3000"
+  ],
+  [
+   "Plus",
+   "+ CHF 1000"
+  ]
+ ],
+ "rows": [
+  [
+   "Logo on conference website, online flyers, posters, opening slides and printed materials",
+   [
+    1,
+    1,
+    1,
+    0
+   ]
+  ],
+  [
+   "Access to the b2match platform: participant marketplace and 1:1 meetings with conference attendees",
+   [
+    1,
+    1,
+    1,
+    0
+   ]
+  ],
+  [
+   "5 min company promotion talk at Networking Apero",
+   [
+    0,
+    1,
+    1,
+    0
+   ]
+  ],
+  [
+   "Social Media advertising 1x month prior to conference (LinkedIn/X)",
+   [
+    0,
+    1,
+    0,
+    0
+   ]
+  ],
+  [
+   "Social Media advertising 2x month prior to conference (LinkedIn/X)",
+   [
+    0,
+    0,
+    1,
+    0
+   ]
+  ],
+  [
+   "Email marketing to share company’s content to attendees",
+   [
+    0,
+    0,
+    1,
+    0
+   ]
+  ],
+  [
+   "Most prominent logo on all printed material",
+   [
+    0,
+    0,
+    1,
+    0
+   ]
+  ],
+  [
+   "Logo and advertising material displayed during coffee breaks and at the apero, booth/poster during conference, evening apero admission (max. 2)",
+   [
+    0,
+    0,
+    0,
+    1
+   ]
+  ]
+ ],
+ "add": [
+  [
+   "Sponsorship of One-to-One Matchmaking Session",
+   "name displayed on agenda",
+   "350"
+  ],
+  [
+   "Sponsorship of a conference room",
+   "name of the sponsor for the conference room, advertising material distribution",
+   "500"
+  ],
+  [
+   "Sponsorship of coffee breaks",
+   "name on agenda and announced during apero",
+   "600"
+  ],
+  [
+   "Sponsorship of drink catering at the evening Networking Apero",
+   "name on agenda and announced during apero",
+   "1000"
+  ],
+  [
+   "Sponsorship for Best Innovation & Science pitch, or Poster winner prizes",
+   "Cash prize or giveaway (e.g. iPad, camera, gift certificate, etc.)",
+   null
+  ]
+ ]
+}
