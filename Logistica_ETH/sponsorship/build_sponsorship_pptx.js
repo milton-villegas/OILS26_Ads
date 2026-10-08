@@ -29,10 +29,11 @@ C.rows.forEach((r,k)=>{const y=Y0+k*(RH+GAP);row(s,y,RH);
   s.addText("✓",{x:px(x+CW/2-21),y:px(y+RH/2-21),w:px(42),h:px(42),fontFace:BODY,fontSize:pt(26),bold:true,color:TIER[i].t,align:"center",valign:"middle",margin:0});});});
 // slide 2
 s=base("Additional offers");
-s.addShape(TOP,{x:px(1500),y:px(206),w:px(340),h:px(70),fill:{color:SKY},line:{type:"none"}});
-s.addText("CHF",{x:px(1500),y:px(206),w:px(340),h:px(70),fontFace:HEAD,fontSize:pt(38),bold:true,color:"06254E",align:"center",valign:"middle",margin:0});
-C.add.forEach((a,k)=>{const y=290+k*148;row(s,y,136);
- s.addShape(R,{x:px(1500),y:px(y),w:px(340),h:px(136),fill:{color:SKY,transparency:80},line:{type:"none"}});
- s.addText([{text:a[0],options:{fontFace:HEAD,fontSize:pt(34),bold:true,color:WHITE,breakLine:true}},{text:a[1],options:{fontFace:BODY,fontSize:pt(25),color:SOFT}}],{x:px(114),y:px(y),w:px(1340),h:px(136),margin:0,valign:"middle",fit:"none"});
- s.addText(a[2]||"Open to discussion",{x:px(1500),y:px(y),w:px(340),h:px(136),fontFace:a[2]?HEAD:BODY,fontSize:pt(a[2]?64:30),bold:true,color:a[2]?SKY:SOFT,align:"center",valign:"middle",margin:0});});
+const priced=C.add.some(a=>a[2]),one=C.add.length===1,RW=one?480:340,RX=1840-RW,AH=one?300:136,AG=one?0:148;
+if(priced){s.addShape(TOP,{x:px(RX),y:px(206),w:px(RW),h:px(70),fill:{color:SKY},line:{type:"none"}});
+ s.addText("CHF",{x:px(RX),y:px(206),w:px(RW),h:px(70),fontFace:HEAD,fontSize:pt(38),bold:true,color:"06254E",align:"center",valign:"middle",margin:0});}
+C.add.forEach((a,k)=>{const y=(one?400:290)+k*AG;row(s,y,AH);
+ s.addShape(R,{x:px(RX),y:px(y),w:px(RW),h:px(AH),fill:{color:SKY,transparency:80},line:{type:"none"}});
+ s.addText([{text:a[0],options:{fontFace:HEAD,fontSize:pt(one?54:34),bold:true,color:WHITE,breakLine:true}},{text:a[1],options:{fontFace:BODY,fontSize:pt(one?34:25),color:SOFT}}],{x:px(114),y:px(y),w:px(RX-150),h:px(AH),margin:0,valign:"middle",fit:"none"});
+ s.addText(a[2]||"Open to discussion",{x:px(RX),y:px(y),w:px(RW),h:px(AH),fontFace:a[2]?HEAD:BODY,fontSize:pt(a[2]?64:(one?44:30)),bold:true,color:SKY,align:"center",valign:"middle",margin:0});});
 pres.writeFile({fileName:path.join(OUT,"OILS26_Sponsorship_Packages.pptx")}).then(()=>console.log("ok"));

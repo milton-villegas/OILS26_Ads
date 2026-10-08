@@ -26,9 +26,10 @@ C.tiers.forEach((t,i)=>{const x=X0+i*(CW+GAP);s1+=`<div class=hd style="left:${x
 C.rows.forEach((r,k)=>{const y=Y0+k*(RH+GAP);s1+=`<div class=row style="top:${y}px;height:${RH}px"><div class=l>${r[0]}</div></div>`;
  C.tiers.forEach((t,i)=>{const x=X0+i*(CW+GAP);s1+=`<div class=cell style="left:${x}px;top:${y}px;width:${CW}px;height:${RH}px;background:${r[1][i]?TIER[i].c+"33":"transparent"}">${r[1][i]?`<div class=chk style="background:${TIER[i].c};color:${TIER[i].t}">✓</div>`:""}</div>`;});});
 s1+=foot;
-let s2=head("Additional offers")+`<div style="position:absolute;left:1500px;top:206px;width:340px;height:70px;border-radius:22px 22px 0 0;background:#8CCBF2;color:#06254E;display:flex;align-items:center;justify-content:center;font:800 38px 'Inter Display',Inter">CHF</div>`;
-C.add.forEach((a,k)=>{const y=290+k*148;
- s2+=`<div class=row style="top:${y}px;height:136px"><div class=l style="width:1380px"><div style="font:700 34px/1.2 'Inter Display',Inter">${a[0]}</div><div style="font:500 25px Inter;color:#C9D6EC;margin-top:8px">${a[1]}</div></div></div><div class=cell style="left:1500px;top:${y}px;width:340px;height:136px;background:#8CCBF233;border-radius:0 14px 14px 0;font:800 64px 'Inter Display',Inter;color:#8CCBF2">${a[2]||"<span style='font:700 30px Inter;color:#C9D6EC'>Open to discussion</span>"}</div>`;});
+const priced=C.add.some(a=>a[2]),one=C.add.length===1,RW=one?480:340,RX=1840-RW,AH=one?300:136,AG=one?0:148;
+let s2=head("Additional offers")+(priced?`<div style="position:absolute;left:${RX}px;top:206px;width:${RW}px;height:70px;border-radius:22px 22px 0 0;background:#8CCBF2;color:#06254E;display:flex;align-items:center;justify-content:center;font:800 38px 'Inter Display',Inter">CHF</div>`:"");
+C.add.forEach((a,k)=>{const y=(one?400:290)+k*AG;
+ s2+=`<div class=row style="top:${y}px;height:${AH}px"><div class=l style="width:${RX-80}px"><div style="font:700 ${one?54:34}px/1.2 'Inter Display',Inter">${a[0]}</div><div style="font:500 ${one?34:25}px Inter;color:#C9D6EC;margin-top:${one?18:8}px">${a[1]}</div></div></div><div class=cell style="left:${RX}px;top:${y}px;width:${RW}px;height:${AH}px;background:#8CCBF233;border-radius:0 14px 14px 0;font:800 64px 'Inter Display',Inter;color:#8CCBF2;text-align:center">${a[2]||`<span style='font:700 ${one?44:30}px Inter;color:#8CCBF2'>Open to discussion</span>`}</div>`;});
 s2+=foot;
 const page=(h)=>`<!doctype html><html><head><meta charset=utf-8><style>${css}</style></head><body>${h}</body></html>`;
 (async()=>{const b=await chromium.launch({args:["--no-sandbox","--disable-gpu"]});
